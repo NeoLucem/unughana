@@ -10,10 +10,10 @@ function App() {
     <div className='app-header'>
     {/* <NavigationBar/> */}
     <Routes>
-      <Route path='/' element={<Register/>}/>
-      <Route path='/login' element={<Login/>}/>
-      <Route path='/register-with-success' element={<RegisterWithSuccess/>}/>
-      <Route path='/login-with-success' element={<LoginWithSuccess/>}/>
+      <Route path='/unughana' element={<Register/>}/>
+      <Route path='/unughana/login' element={<Login/>}/>
+      <Route path='/unughana/register-with-success' element={<RegisterWithSuccess/>}/>
+      <Route path='/unughana/login-with-success' element={<LoginWithSuccess/>}/>
     </Routes>
   </div>
   );
