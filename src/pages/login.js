@@ -31,6 +31,8 @@ function Login() {
         try{
             const userCredential = await signInWithEmailAndPassword(auth, inputEmail, inputPassword);
             console.log(userCredential.user);
+
+            
             // console.log(
             //     'Email: '+ inputEmail +'\n'+
             //     'Password1: '+ inputPassword+'\n');
@@ -48,7 +50,7 @@ function Login() {
     };
 
     const handleClick = ()=>{
-        loginUser().then(()=>{navigate('/login-with-success')})
+        loginUser().then(()=>{navigate('/unughana/login-with-success')})
         
     }
 

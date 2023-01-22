@@ -47,6 +47,7 @@ function Register() {
                 console.log(user);
             }else if(inputPassword !== inputPassword2){
                 console.log('no match');
+                
             }
         }
         catch(error){
@@ -57,7 +58,7 @@ function Register() {
     }
 
     const handleClick = ()=>{
-        register().then(()=>{navigate('/register-with-success')})
+        register().then(()=>{navigate('/unughana/register-with-success')})
         //navigate('/register-with-success')
     }
   return (

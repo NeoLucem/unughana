@@ -6,8 +6,8 @@ function Navigation() {
     <>
     <nav className="navbar navbar-expand-sm navbar-light bg-dark">
         <div className="container">
-            <a href="index.html" className="navbar-brand navbar-center" style={{color: 'white'}}>uniGhana</a>
-            <Link to='/login'>Login</Link>
+            <Link to='/unughana/' className="navbar-brand navbar-center" style={{color: 'white'}}>uniGhana</Link>
+            <Link to='/unughana/login'>Login</Link>
         </div>
     </nav>
     </>
