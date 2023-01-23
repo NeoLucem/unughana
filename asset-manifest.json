@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/unughana/static/css/main.de24f77c.css",
-    "main.js": "/unughana/static/js/main.802d808b.js",
+    "main.js": "/unughana/static/js/main.3d9aecd6.js",
     "static/js/787.69d7bcaf.chunk.js": "/unughana/static/js/787.69d7bcaf.chunk.js",
     "index.html": "/unughana/index.html",
     "main.de24f77c.css.map": "/unughana/static/css/main.de24f77c.css.map",
-    "main.802d808b.js.map": "/unughana/static/js/main.802d808b.js.map",
+    "main.3d9aecd6.js.map": "/unughana/static/js/main.3d9aecd6.js.map",
     "787.69d7bcaf.chunk.js.map": "/unughana/static/js/787.69d7bcaf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de24f77c.css",
-    "static/js/main.802d808b.js"
+    "static/js/main.3d9aecd6.js"
   ]
 }
