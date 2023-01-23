@@ -40,26 +40,43 @@ function Register() {
     // Register user
     const register =  async ()=>{
         try{
-            checkPasswords();
+            //checkPasswords();
             if (inputPassword === inputPassword2) {
                 console.log('match');
                 const user = await createUserWithEmailAndPassword(auth, inputEmail, inputPassword);
                 console.log(user);
+                document.getElementById('text-alert').style.visibility='hidden';
+                navigate('/unughana/register-with-success');
             }else if(inputPassword !== inputPassword2){
                 console.log('no match');
-                
+                document.getElementById('text-alert').style.visibility='visible';
+                document.getElementById('text-alert').innerText='Your password must match';
+            }
+            else if(inputPassword === ' ' || inputPassword2 === ''){
+                console.log('password input are empty');
+                document.getElementById('text-alert').style.visibility='visible';
+                document.getElementById('text-alert').innerText='Please fill the password input area';
+            }
+            else{
+                console.log('error');
             }
         }
         catch(error){
             console.log(error.message);
+            document.getElementById('text-alert').style.visibility='visible';
+            document.getElementById('text-alert').innerText='Your password must match';
         }
     
         
     }
 
     const handleClick = ()=>{
-        register().then(()=>{navigate('/unughana/register-with-success')})
+        register()//.then(()=>{navigate('/unughana/register-with-success')})
         //navigate('/register-with-success')
+    }
+
+    const handleSubmit = event=>{
+        event.preventDefault()
     }
   return (
     <>
@@ -67,7 +84,7 @@ function Register() {
         <main>
         <div className="container-fluid d-flex justify-content-around align-items-center mt-5">
             <div className="section-1">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <h1 className="mb-3">Register</h1>
                     <div className="mb-3">
                         <label for="exampleInputName1" className="form-label">Full name</label>

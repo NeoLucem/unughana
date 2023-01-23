@@ -31,26 +31,38 @@ function Login() {
         try{
             const userCredential = await signInWithEmailAndPassword(auth, inputEmail, inputPassword);
             console.log(userCredential.user);
-
-            
-            // console.log(
-            //     'Email: '+ inputEmail +'\n'+
-            //     'Password1: '+ inputPassword+'\n');
-            //     checkPasswords();
-            // if (userCredential === true){
-            //     navigate('/register-with-success');
-            //     debugger;
-            // }
+            if (userCredential.user){
+                document.getElementById('text-alert').style.visibility='hidden';
+                navigate('/unughana/login-with-success');
+            }
+            else if(inputEmail === '' && inputPassword === ''){
+                document.getElementById('text-alert').style.visibility='visible';
+                document.getElementById('text-alert').innerText='Please fill the form before submission';
+            }
+            else{
+                console.log('account does not exist');
+                document.getElementById('text-alert').innerText='Please check your credential';
+            }
         }
         catch(error){
             console.log(error.message);
             //window.alert('Please check your credentials');
-            //document.getElementById('text-alert').style.visibility='visible';
+            document.getElementById('text-alert').style.visibility='visible';
+            document.getElementById('text-alert').innerText='Please check your credential';
+            if (inputEmail === '' && inputPassword === '') {
+                document.getElementById('text-alert').style.visibility='visible';
+                document.getElementById('text-alert').innerText='Please fill the form before submission';
+            } 
+            else if(inputEmail === '' || inputPassword === '') {
+                document.getElementById('text-alert').style.visibility='visible';
+                document.getElementById('text-alert').innerText='Please fill the form before submission';
+            }
+
         }
     };
 
     const handleClick = ()=>{
-        loginUser().then(()=>{navigate('/unughana/login-with-success')})
+        loginUser()//.then(()=>{navigate('/unughana/login-with-success')})
         
     }
 
